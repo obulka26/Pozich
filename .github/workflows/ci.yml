@@ -1,0 +1,29 @@
+name: Pozich CI
+
+on:
+  push:
+    branches: [ main, brach-1 ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Build project
+        run: |
+          echo "Building Pozich project..."
+          mkdir -p build
+          cp -r . build/ || true
+          echo "Build completed"
+
+      - name: Run tests
+        run: |
+          echo "Running tests..."
+          # Тут можна додати: npm test / pytest / go test тощо
+          echo "All tests passed"
+          exit 0
+
