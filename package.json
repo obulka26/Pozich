@@ -1,0 +1,12 @@
+{
+  "name": "pozich",
+  "version": "1.0.0",
+  "description": "MVP сусідський застосунок оренди речей",
+  "main": "src/index.js",
+  "scripts": {
+    "build": "node scripts/build.js",
+    "test": "node tests/smoke.test.js"
+  },
+  "author": "Bulka O.A.",
+  "license": "MIT"
+}
